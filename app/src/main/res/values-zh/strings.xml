@@ -103,8 +103,10 @@
     <string name="settingsBehavior">行为</string>
     <string name="settingsBehaviorExportRulesAsLink">以链接形式导出规则</string>
     <string name="settingsBehaviorExportRulesAsLinkSummary">在导出的规则前添加「tarnhelm://」</string>
-    <string name="settingsBehaviorEnableDefaultUAWhenRequest">使用默认 UA (伪装为 Chrome)</string>
-    <string name="settingsBehaviorEnableDefaultUAWhenRequestSummary">当规则未指定 UA 时，在 HTTP 请求中使用伪造的 Chrome UA</string>
+    <string name="settingsBehaviorEnableDefaultUA">使用默认 UA</string>
+    <string name="settingsBehaviorEnableDefaultUASummary">当规则未指定 UA 时，在 HTTP 请求中使用指定的 UA</string>
+    <string name="settingsBehaviorDefaultUA">默认 UA</string>
+    <string name="settingsBehaviorDefaultUASummary">指定默认 UA</string>
     <string name="settingsOthersTitle">其他</string>
     <string name="settingsOthersBackupAndRestore">备份与恢复</string>
     <string name="settingsOthersWebSite">网站</string>

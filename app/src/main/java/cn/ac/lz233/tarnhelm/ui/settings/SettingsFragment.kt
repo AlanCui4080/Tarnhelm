@@ -55,7 +55,7 @@ class SettingsFragment() : PreferenceFragmentCompat() {
         val alwaysSendProcessingNotification: TwoStatePreference = findPreference("alwaysSendProcessingNotification")!!
         val systemNotificationSettings: Preference = findPreference("systemNotificationSettings")!!
         val exportRulesAsLink: TwoStatePreference = findPreference("exportRulesAsLink")!!
-        val enableDefaultUAWhenRequest: TwoStatePreference = findPreference("enableDefaultUAWhenRequest")!!
+        val enableDefaultUA: TwoStatePreference = findPreference("enableDefaultUA")!!
         val backupAndRestore: Preference = findPreference("backupAndRestore")!!
         val website: Preference = findPreference("website")!!
         val telegramChannel: Preference = findPreference("telegramChannel")!!

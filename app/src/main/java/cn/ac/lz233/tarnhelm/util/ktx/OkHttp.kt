@@ -13,7 +13,7 @@ import java.io.IOException
 fun HttpUrl.followRedirect(userAgent: String?): HttpUrl {
     LogUtil._d("followRedirect: rawUA: $userAgent," + " " +
             "defaultUA: " + SettingsDao.defaultUA.toString() + " " +
-            "enableDefaultUAWhenRequest: " + SettingsDao.enableDefaultUAWhenRequest.toString())
+            "enabledefaultUA: " + SettingsDao.enableDefaultUA.toString())
     val response = Network.okHttpClientNoRedirect
         .newCall(
             Request.Builder()
@@ -24,7 +24,7 @@ fun HttpUrl.followRedirect(userAgent: String?): HttpUrl {
                             addHeader("User-Agent", userAgent)
                         }
 
-                        SettingsDao.enableDefaultUAWhenRequest -> {
+                        SettingsDao.enableDefaultUA -> {
                             SettingsDao.defaultUA?.let { value ->
                                 addHeader("User-Agent", value)
                             }
