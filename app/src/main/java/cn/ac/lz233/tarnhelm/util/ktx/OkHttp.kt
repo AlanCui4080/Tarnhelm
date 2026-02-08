@@ -1,6 +1,8 @@
 package cn.ac.lz233.tarnhelm.util.ktx
 
 import cn.ac.lz233.tarnhelm.logic.Network
+import cn.ac.lz233.tarnhelm.logic.dao.SettingsDao
+import cn.ac.lz233.tarnhelm.util.LogUtil
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.Request
@@ -9,12 +11,25 @@ import org.json.JSONObject
 import java.io.IOException
 
 fun HttpUrl.followRedirect(userAgent: String?): HttpUrl {
+    LogUtil._d("followRedirect: rawUA: $userAgent," + " " +
+            "defaultUA: " + SettingsDao.defaultUA.toString() + " " +
+            "enableDefaultUAWhenRequest: " + SettingsDao.enableDefaultUAWhenRequest.toString())
     val response = Network.okHttpClientNoRedirect
         .newCall(
             Request.Builder()
                 .url(this)
-                .let {
-                    if (userAgent.isNullOrEmpty()) it else it.addHeader("User-Agent", userAgent)
+                .apply {
+                    when {
+                        !userAgent.isNullOrEmpty() -> {
+                            addHeader("User-Agent", userAgent)
+                        }
+
+                        SettingsDao.enableDefaultUAWhenRequest -> {
+                            SettingsDao.defaultUA?.let { value ->
+                                addHeader("User-Agent", value)
+                            }
+                        }
+                    }
                 }
                 .build()
         )

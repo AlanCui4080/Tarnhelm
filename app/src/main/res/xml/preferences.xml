@@ -64,6 +64,12 @@
             android:key="exportRulesAsLink"
             android:summary="@string/settingsBehaviorExportRulesAsLinkSummary"
             android:title="@string/settingsBehaviorExportRulesAsLink" />
+
+    <rikka.material.preference.MaterialSwitchPreference
+        android:key="enableDefaultUAWhenRequest"
+        android:summary="@string/settingsBehaviorEnableDefaultUAWhenRequestSummary"
+        android:title="@string/settingsBehaviorEnableDefaultUAWhenRequest" />
+
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/settingsOthersTitle">

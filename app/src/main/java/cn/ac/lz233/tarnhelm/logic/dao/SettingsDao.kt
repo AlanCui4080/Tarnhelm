@@ -20,4 +20,10 @@ object SettingsDao {
 
     val exportRulesAsLink
         get() = App.spSettings.getBoolean("exportRulesAsLink", false)
+
+    val enableDefaultUAWhenRequest
+        get() = App.spSettings.getBoolean("enableDefaultUAWhenRequest", true)
+
+    val defaultUA
+        get() = App.spSettings.getString("defaultUA", "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36")
 }

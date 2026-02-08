@@ -108,6 +108,8 @@
     <string name="settingsBehavior">Behavior</string>
     <string name="settingsBehaviorExportRulesAsLink">Export rules as link</string>
     <string name="settingsBehaviorExportRulesAsLinkSummary">Add \"tarnhelm://\" on exported rules</string>
+    <string name="settingsBehaviorEnableDefaultUAWhenRequest">Use Default UA (disguised as Chrome)</string>
+    <string name="settingsBehaviorEnableDefaultUAWhenRequestSummary">Use Default UA in HTTP Request if the rule not specified (disguised as Chrome)</string>
     <string name="settingsOthersTitle">Others</string>
     <string name="settingsOthersBackupAndRestore">Backup &amp; restore</string>
     <string name="settingsOthersWebSite">Website</string>
