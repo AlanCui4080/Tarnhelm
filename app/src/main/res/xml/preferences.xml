@@ -70,12 +70,11 @@
         android:summary="@string/settingsBehaviorEnableDefaultUASummary"
         android:title="@string/settingsBehaviorEnableDefaultUA" />
 
-    <EditTextPreference
-        android:key="defaultUA"
-        android:title="@string/settingsBehaviorDefaultUA"
-        android:summary="@string/settingsBehaviorDefaultUASummary"
-        android:defaultValue="Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36" />
-
+        <EditTextPreference
+            android:key="overrideUA"
+            android:title="@string/settingsBehaviorOverrideUA"
+            android:summary="@string/settingsBehaviorOverrideUASummary"
+            android:defaultValue="" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/settingsOthersTitle">
